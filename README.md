@@ -195,7 +195,7 @@ database:
 
 
 #### 运行服务器
-1. 在服务器上面安装Dart sdk,这里的服务器建议是ubuntu,可以直接安装官网的Dart SDK。如果是centOS的话，需要自己下载dart sdk源码并进行编译构建，好麻烦，而且可能还会遇到其他问题。（所以我最后重装系统，搞成ubuntu系统了）
+1. 在服务器上面安装Dart sdk,这里的服务器建议是ubuntu,可以直接安装官网的Dart SDK。
 
 2. 将本地的服务器代码，放置到服务器上面。用到两个工具，SecureCRT和FileZilla，SecureCRT用来搞远程登录，FileZilla用来搞文件传输。具体使用百度一下。
 ![](https://tva1.sinaimg.cn/large/006tNbRwgy1ga10o9bs7ij30vc0qawjq.jpg)
@@ -222,16 +222,12 @@ aqueduct serve
 
 一般情况下，当我们关闭远程窗口的话，项目就跟着退出运行了。所以可以使用Screen来让我们在关闭ssh连接的情况下，让程序继续在后台运行。screen命令可以实现当前窗口与任务分离，我们即使离线了，服务器仍在后台运行任务。当我们重新登录服务器，可以读取窗口线程，重新连接任务窗口。
 
-推荐一篇文章，了解下什么是Screen。[linux 技巧：使用 screen 管理你的远程会话](https://www.ibm.com/developerworks/cn/linux/l-cn-screen/)。
-
 
 ### 客户端
 客户端实现，Flutter。客户端这边的实现比较简单，为了快点体验出三端一体化的快感，用了一些第三方库加快节奏。UI的话就是一个登录注册页面，再加上一个聊天列表和聊天窗口页面。
 #### 总览
 
 ![](https://tva1.sinaimg.cn/large/006tNbRwgy1ga7103cd8nj30j417cafj.jpg)
-
-只是做简单Demo,所以整体的代码架构比较简单，后期再优化下。
 
 * config目录：保存App配置的一些信息。比如当前平台是否是大屏幕、配置根据当前环境去拿去host（本地环境拿本地host,线上环境拿生产host）
 * model目录：定义接口返回的实体类。
@@ -241,7 +237,6 @@ aqueduct serve
 * main.dart和main_local.dart：这两个的代码是一样的，区别就是接口的host不一样。main_local.dart在开发阶段测试接口用的是本地的localhost，main.dart用的是生产环境的host。
 
 #### 登录注册页面
-UI的代码就不展示了，无非就是两个文本框加个登录按钮。
 看一下之前在前面的项目中，LoginController定义好的登录接口返回的结构:
 
 ```
