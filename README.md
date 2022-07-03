@@ -6,12 +6,7 @@
 ![](https://tva1.sinaimg.cn/large/006tNbRwgy1ga73wsgtgpj319v0u0b29.jpg)
 ![](https://tva1.sinaimg.cn/large/006tNbRwgy1ga73y6l3q7j319v0u0hdt.jpg)
 
-[Github源码](https://github.com/LXD312569496/flutter_chat),包括了客户端和服务端的代码,目前只适配了app和desktop平台。
-
-
-## 基本功能
-
-由于时间关系，也只是做了下一些最基本的功能，后面有空再继续完善。
+[Github源码](https://github.com/1613335765/test.git),包括了客户端和服务端的代码,适配了app和desktop平台。
 
 ### 客户端
 * 用户登录注册
