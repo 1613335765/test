@@ -1,28 +1,12 @@
 # flutter_chat
 聊天室，使用Dart开发后端，使用Flutter开发前端页面
 
-
-## 介绍
-
-作为一个Android开发，基本没怎么接触后台开发的东西，对这方面也有点兴趣，一直都想写套接口实现下简单的后端服务玩一玩。
-Flutter也学习了快一年了，加上之前看了下闲鱼的一篇文章[Flutter & Dart三端一体化开发](https://blog.csdn.net/weixin_38912070/article/details/93857162)，兴趣就来了，有兴趣就有学习热情。于是将Dart的[HttpServer](https://dart.dev/tutorials/server/httpserver)学习了一下，实现了一个简单的聊天室应用。
-
-做这个应用还有其他的目的：
-
-* 学习WebSocket，顺便复习下计算机网络的一些知识。
-* 开发过程中需要两个客户端进行聊天的聊天，使用两个android studio模拟器的话，电脑简直卡飞天了。所以就使用Flutter开发的Desktop客户端来进行调试。反正基本上就是一套代码，然后自己做下desktop端和app端的屏幕适配就行了。
-* 学习Dart的HttpServer和第三方服务端框架[aqueduct](https://aqueduct.io/docs/)。看了下网上的几个dart服务器框架，就这个比较好，上手容易，功能和文档也比较完善。
-* 继续练手Flutter，这段时间没做项目，感觉有点生疏了
-* 体验一波全栈开发的过程
-
 ## 演示
 ![](https://tva1.sinaimg.cn/large/006tNbRwgy1ga73vgkhu3j319c0u0b29.jpg)
 ![](https://tva1.sinaimg.cn/large/006tNbRwgy1ga73wsgtgpj319v0u0b29.jpg)
 ![](https://tva1.sinaimg.cn/large/006tNbRwgy1ga73y6l3q7j319v0u0hdt.jpg)
 
-[Github源码](https://github.com/LXD312569496/flutter_chat),包括了客户端和服务端的代码。
-
-clone项目后，可以在本地运行我的客户端代码。基本上是一套代码，目前只适配了app和desktop平台。（web遇到点问题，所以还没弄好）
+[Github源码](https://github.com/LXD312569496/flutter_chat),包括了客户端和服务端的代码,目前只适配了app和desktop平台。
 
 
 ## 基本功能
@@ -418,13 +402,3 @@ void initState(){
 整体的思路是类似Android的Fragment。我们需要做的就是定义两个Widget，一个用于显示主列表，一个用于显示详细视图。实际上，这些就是类似的fragments。
 
 我们只需要检查设备是否具有足够的宽度来处理列表视图和详细视图。如果是，我们在同一屏幕上显示两个widget。如果设备没有足够的宽度来包含两个界面，那我们只需要在屏幕中展示主列表，点击列表项后导航到独立的屏幕来显示详细视图。
-
-
-
-## 总结
-
-1. 做这个项目主要还是为了体验下用Dart进行全栈开发的感觉，总体效率确实提高很多。
-2. 没有在真正的项目中进行实战。先把基础的知识学习积累起来，期待在后面能够应用到真正的项目中。
-3. 现在的Demo比较简单，有空再把这个项目进行完善
-4. 近段时间还是在看原生的东西，有些技术还是类似的，对原生了解得比较深入，可以更好地使用和理解Flutter。
-
